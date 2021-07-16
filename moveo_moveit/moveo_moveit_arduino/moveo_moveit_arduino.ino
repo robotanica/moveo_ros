@@ -124,7 +124,7 @@ void setup() {
   digitalWrite(E1_ENABLE_PIN, LOW);
   
   //put your setup code here, to run once:
-  //Serial.begin(57600);
+  Serial.begin(57600);
   pinMode(13,OUTPUT);
   joint_status = 1;
 
@@ -175,6 +175,6 @@ void loop() {
   joint_status = 0;
   
   nh.spinOnce();
-  delay(1);
+  //delay(1);
   
 }
