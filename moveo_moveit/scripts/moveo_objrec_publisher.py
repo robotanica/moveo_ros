@@ -15,9 +15,9 @@ import sys
 import zmq
 from msgpack import loads
 import time
-import pyttsx
+#import pyttsx
 from datetime import datetime 
-from espeak import espeak
+#from espeak import espeak
 from moveo_moveit.msg import ArmJointState
 
 fixated_object_label = None
@@ -93,10 +93,11 @@ def publish_detected_object():
                 goal.position6 = i[5]
                 pub.publish(goal)
                 rospy.sleep(10)
-                
-        espeak.synth(fixated_object_label)
-        while espeak.is_playing():
-             pass
+
+        print(fixated_object_label)
+        #espeak.synth(fixated_object_label)
+        #while espeak.is_playing():
+        #     pass
 
         #rate.sleep()
     
